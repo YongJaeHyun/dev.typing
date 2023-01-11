@@ -1,0 +1,37 @@
+{
+  "root": true,
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-react",
+    "eslint-plugin-prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+    "@typescript-eslint/strict-boolean-expressions": [
+      2,
+      {
+        "allowString": false,
+        "allowNumber": false
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"], // Your TypeScript files extension
+
+      // As mentioned in the comments, you should extend TypeScript plugins here,
+      // instead of extending them outside the `overrides`.
+      // If you don't want to extend any rules, you don't need an `extends` attribute.
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
+      ],
+
+      "parserOptions": {
+        "project": ["./tsconfig.json"] // Specify it only for TypeScript files
+      }
+    }
+  ]
+}
