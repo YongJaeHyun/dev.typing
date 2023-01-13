@@ -1,0 +1,29 @@
+{
+  "root": true,
+  "plugins": ["@typescript-eslint", "eslint-plugin-react", "eslint-plugin-prettier"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+    "@typescript-eslint/strict-boolean-expressions": [
+      2,
+      {
+        "allowString": false,
+        "allowNumber": false
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": [
+        "plugin:prettier/recommended",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    }
+  ]
+}
