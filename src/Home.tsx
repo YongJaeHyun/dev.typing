@@ -7,7 +7,7 @@ import UserInputBox from './molecules/UserInputBox';
 const Container = styled.div`
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   align-items: center;
   justify-content: center;
   background-color: ${(props) => props.theme.bgColor};
