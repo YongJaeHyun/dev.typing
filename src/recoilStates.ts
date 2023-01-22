@@ -1,9 +1,13 @@
 import { atom } from 'recoil';
-import { typingList } from './typingList';
+import { typingList } from './assets/typingList';
 
 export interface ITypingList {
-  category: string;
-  contents: string;
+  Network: string[];
+  Data_Structure: string[];
+  Database: string[];
+  Design_Pattern: string[];
+  Operating_System: string[];
+  My_Bookmark?: string[];
 }
 
 export const isDarkState = atom({
@@ -11,7 +15,7 @@ export const isDarkState = atom({
   default: true,
 });
 
-export const typingListState = atom<ITypingList[]>({
+export const typingListState = atom<ITypingList>({
   key: 'typingList',
-  default: typingList.sort(() => Math.floor(Math.random() - 0.5)),
+  default: typingList,
 });
