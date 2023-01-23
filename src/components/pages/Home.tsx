@@ -1,5 +1,5 @@
 import { useRecoilState } from 'recoil';
-import { typingListState } from './recoilStates';
+import { typingListState } from '../../recoil/recoilStates';
 
 const Home = () => {
   const [typingList, setTypingList] = useRecoilState(typingListState);
