@@ -1,4 +1,4 @@
-import Icon, { Props } from './Icon';
+import { Icon, Props } from './Icon';
 import { Story, Meta } from '@storybook/react';
 
 export default {
@@ -7,20 +7,22 @@ export default {
   argTypes: {
     color: { control: { type: 'color', presetColors: ['#f5f6fa', '#000'] } },
     name: {
-      control: 'text',
+      control: 'select',
+      options: [
+        'menu',
+        'lightbulb',
+        'double_arrow',
+        'format_list_bulleted',
+        'bookmark',
+        'play_arrow',
+        'light_mode',
+        'dark_mode',
+      ],
       defaultValue: 'menu',
-    },
-    fill: {
-      control: 'inline-radio',
-      options: [0, 1],
-      defaultValue: 0,
     },
   },
 } as Meta;
 
-const testFunc = () => alert('클릭!!');
-const Template: Story<Props> = (args) => <Icon {...args} onClick={testFunc} />;
+const Template: Story<Props> = (args) => <Icon {...args} />;
 
 export const Icons = Template.bind({});
-
-export const GithubIcon = () => <Icon src="./assets/img/github-mark.png" />;

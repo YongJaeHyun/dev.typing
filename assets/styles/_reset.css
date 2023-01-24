@@ -129,13 +129,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-* {
-  box-sizing: border-box;
-  font-family: 'Apple SD Gothic Neo', 'Roboto', sans-serif;
-}
 body {
   font-weight: 300;
-  color: black;
   line-height: 1.2;
 }
 a {
