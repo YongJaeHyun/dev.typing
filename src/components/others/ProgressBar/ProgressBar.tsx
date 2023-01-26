@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { WINDOW_WIDTH } from '../../../utils';
 
 export interface Props {
   width: number;
 }
 
-const Div = styled.div<Props>`
-  width: ${(props) => props.width / 3};
+const Div = styled.div`
+  width: ${WINDOW_WIDTH / 3};
   height: 0.7rem;
 `;
 
@@ -24,14 +25,12 @@ const InnerSpan = styled.span<Props>`
   display: block;
 `;
 
-const ProgressBar = (props: Props) => {
-  const WIDTH = window.innerWidth;
+export const ProgressBar = (props: Props) => {
   return (
-    <Div width={WIDTH}>
+    <Div>
       <OuterSpan>
         <InnerSpan width={props.width}></InnerSpan>
       </OuterSpan>
     </Div>
   );
 };
-export default ProgressBar;
