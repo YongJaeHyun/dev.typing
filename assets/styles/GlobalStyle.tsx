@@ -7,9 +7,12 @@ const GlobalStyle = createGlobalStyle`
     user-select: none;
   }
   html, body {
-    background-color: ${(props) => props.theme.mainBgColor};
-    color: ${(props) => props.theme.mainTextColor};
+    background-color: ${(props) => props.theme.bgColor.themeDefault};
+    color: ${(props) => props.theme.textColor.themeDefault};
     font-size: 16px;
+  }
+  li {
+    margin: 0.5rem 0;
   }
 `;
 
