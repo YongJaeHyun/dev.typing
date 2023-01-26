@@ -20,20 +20,12 @@ const OuterCircle = styled.button<{ isDark: boolean }>`
   display: flex;
   width: 80px;
   height: 35px;
-  border: 2px solid
-    ${(props) =>
-      props.isDark
-        ? props.theme.textColor.white
-        : props.theme.textColor.light_black};
+  border: 2px solid ${(props) => props.theme.textColor.themeDefault};
   border-radius: 20px;
   align-items: center;
-  background-color: ${(props) => props.theme.mainBgColor};
+  background-color: ${(props) => props.theme.bgColor.themeDefault};
   position: relative;
   cursor: pointer;
-  color: ${(props) =>
-    props.isDark
-      ? props.theme.textColor.white
-      : props.theme.textColor.light_black};
   transition: all 0.2s ease-in-out;
   &:hover {
     border-color: ${(props) =>
