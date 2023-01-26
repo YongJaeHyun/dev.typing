@@ -7,7 +7,7 @@ export interface Props {
 }
 
 const Span = styled.span<Props>`
-  color: ${(props) => props.color ?? props.theme.mainTextColor};
+  color: ${(props) => props.color ?? props.theme.textColor.themeDefault};
   ${(props) =>
     props.isDark !== undefined &&
     css`

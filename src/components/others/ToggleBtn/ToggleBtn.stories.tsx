@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import ToggleBtn from './ToggleBtn';
 
 export default {
-  title: 'ToggleBtn',
+  title: 'Others/ToggleBtn',
   component: ToggleBtn,
 } as Meta;
 
