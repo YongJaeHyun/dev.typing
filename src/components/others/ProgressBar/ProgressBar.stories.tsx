@@ -1,8 +1,8 @@
 import { Story, Meta } from '@storybook/react';
-import ProgressBar, { Props } from './ProgressBar';
+import { ProgressBar, Props } from './ProgressBar';
 
 export default {
-  title: 'ProgressBar',
+  title: 'Others/ProgressBar',
   component: ProgressBar,
   argTypes: {
     width: { control: 'range', defaultValue: 0, min: 0, max: 100, step: 1 },

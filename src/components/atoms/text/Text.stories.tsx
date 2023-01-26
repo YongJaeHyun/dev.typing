@@ -1,8 +1,8 @@
 import { Story, Meta } from '@storybook/react';
-import Text, { Props } from './Text';
+import { Text, Props } from './Text';
 
 export default {
-  title: 'Text',
+  title: 'Atoms/Text',
   component: Text,
   argTypes: {
     color: {

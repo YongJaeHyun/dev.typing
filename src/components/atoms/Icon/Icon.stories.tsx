@@ -2,7 +2,7 @@ import { Icon, Props } from './Icon';
 import { Story, Meta } from '@storybook/react';
 
 export default {
-  title: 'Icon',
+  title: 'Atoms/Icon',
   component: Icon,
   argTypes: {
     color: { control: { type: 'color', presetColors: ['#f5f6fa', '#000'] } },
@@ -25,4 +25,4 @@ export default {
 
 const Template: Story<Props> = (args) => <Icon {...args} />;
 
-export const Icons = Template.bind({});
+export const Default = Template.bind({});
