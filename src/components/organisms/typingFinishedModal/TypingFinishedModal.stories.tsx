@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import { TypingFinishedModal, Props } from './TypingFinishedModal';
 
 export default {
-  title: 'Oragnisms/TypingFinishedModal',
+  title: 'Organisms/TypingFinishedModal',
   component: TypingFinishedModal,
   argTypes: {
     cpmValue: { control: 'number' },

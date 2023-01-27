@@ -1,5 +1,5 @@
 import { HTMLAttributes } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { fontWeightSwitch } from '../../../utils';
 
 type TFontWeight = 'LIGHT' | 'REGULAR' | 'MEDIUM' | 'BOLD' | 'BOLDEST';
@@ -20,18 +20,6 @@ const Span = styled.span<Props>`
     fontWeight !== undefined && fontWeightSwitch[fontWeight]};
   line-height: 1.2;
   font-family: ${(props) => props.fontFamily};
-  ${(props) =>
-    props.as === 'li' &&
-    css`
-      height: 20px;
-      line-height: 20px;
-      :before {
-        content: '·';
-        font-size: 25px;
-        vertical-align: middle;
-        color: ${(props) => props.theme.accentColor.themeDefault};
-      }
-    `}
 `;
 
 export const Text = (props: Props) => (

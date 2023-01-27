@@ -10,7 +10,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: ${WINDOW_WIDTH / 4}px;
-  height: ${WINDOW_HEIGHT / 4}px;
+  height: ${WINDOW_HEIGHT / 3.5}px;
   justify-content: center;
   align-items: center;
   position: absolute;

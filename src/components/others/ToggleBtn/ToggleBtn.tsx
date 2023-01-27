@@ -4,25 +4,22 @@ import { isDarkState } from '../../../recoil/recoilStates';
 import { Icon } from '../../atoms/icon/Icon';
 
 const InnerCircle = styled.div<{ isDark: boolean }>`
-  width: 26px;
-  height: 26px;
+  width: 25px;
+  height: 25px;
   border-radius: 15px;
-  background-color: ${(props) =>
-    props.isDark
-      ? props.theme.textColor.white
-      : props.theme.textColor.light_black};
-  left: ${(props) => (props.isDark ? '45px' : '5px')};
+  background-color: ${(props) => props.theme.textColor.themeDefault};
+  transform: translate(-50%, -50%);
+  left: ${(props) => (props.isDark ? '59px' : '18px')};
   position: absolute;
   transition: all 0.4s ease-in-out;
 `;
 
 const OuterCircle = styled.button<{ isDark: boolean }>`
-  display: flex;
+  display: inline-block;
   width: 80px;
   height: 35px;
   border: 2px solid ${(props) => props.theme.textColor.themeDefault};
   border-radius: 20px;
-  align-items: center;
   background-color: ${(props) => props.theme.bgColor.themeDefault};
   position: relative;
   cursor: pointer;

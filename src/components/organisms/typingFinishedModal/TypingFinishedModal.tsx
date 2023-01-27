@@ -16,7 +16,7 @@ const TextBox = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 75%;
+  width: 70%;
   height: 100%;
 `;
 
@@ -45,6 +45,16 @@ const FooterBox = styled.div`
 `;
 
 const Ul = styled.ul``;
+const Li = styled.li`
+  height: 20px;
+  line-height: 20px;
+  :before {
+    content: '·';
+    font-size: 25px;
+    vertical-align: middle;
+    color: ${(props) => props.theme.accentColor.themeDefault};
+  }
+`;
 
 export const TypingFinishedModal = (props: Props) => {
   // 현재 카테고리 학습률
@@ -73,13 +83,14 @@ export const TypingFinishedModal = (props: Props) => {
         <BodyBox>
           <Ul>
             {mainTexts.map((text, index) => (
-              <Text
-                as="li"
-                key={index}
-                value={text}
-                fontSize={14}
-                fontWeight="BOLD"
-              />
+              <Li>
+                <Text
+                  key={index}
+                  value={text}
+                  fontSize={14}
+                  fontWeight="BOLD"
+                />
+              </Li>
             ))}
           </Ul>
         </BodyBox>
