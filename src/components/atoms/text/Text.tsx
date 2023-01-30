@@ -6,7 +6,7 @@ type TFontWeight = 'LIGHT' | 'REGULAR' | 'MEDIUM' | 'BOLD' | 'BOLDEST';
 type TFontFamily = 'Apple SD Gothic Neo' | 'Noto Sans KR' | 'sans-serif';
 
 export interface Props extends HTMLAttributes<HTMLSpanElement> {
-  fontSize?: number;
+  fontSize: string;
   color?: string;
   value?: string;
   fontWeight?: TFontWeight;
@@ -15,11 +15,12 @@ export interface Props extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const Span = styled.span<Props>`
-  font-size: ${(props) => props.fontSize ?? 16}px;
+  font-size: ${(props) => props.fontSize};
   font-weight: ${({ fontWeight }) =>
     fontWeight !== undefined && fontWeightSwitch[fontWeight]};
-  line-height: 1.2;
+  line-height: 1.6;
   font-family: ${(props) => props.fontFamily};
+  color: ${(props) => props.color};
 `;
 
 export const Text = (props: Props) => (
