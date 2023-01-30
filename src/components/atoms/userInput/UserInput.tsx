@@ -12,7 +12,6 @@ const Input = styled.input<Props>`
   caret-color: ${(props) => props.theme.accentColor};
 `;
 
-const UserInput = (props: Props) => (
+export const UserInput = (props: Props) => (
   <Input opacity={props.opacity} spellCheck={false} autoComplete="off" />
 );
-export default UserInput;
