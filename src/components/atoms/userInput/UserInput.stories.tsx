@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react';
-import UserInput, { Props } from './UserInput';
+import { UserInput, Props } from './UserInput';
 
 export default {
   title: 'Atoms/UserInput',

@@ -5,7 +5,9 @@ export default {
   title: 'Atoms/Image',
   component: Image,
   argTypes: {
-    src: { control: 'text', defaultValue: './assets/img/github-mark.png' },
+    width: { control: 'text', defaultValue: '25px' },
+    height: { control: 'text', defaultValue: '25px' },
+    src: { control: 'text', defaultValue: './assets/img/github-mark' },
   },
 } as Meta;
 

@@ -10,7 +10,13 @@
         "allowString": false,
         "allowNumber": false
       }
-    ]
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+          "endOfLine": "auto"
+      }
+  ]
   },
   "overrides": [
     {

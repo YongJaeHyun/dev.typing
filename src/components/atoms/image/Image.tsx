@@ -1,13 +1,25 @@
 import styled from 'styled-components';
+import { useRecoilValue } from 'recoil';
+import { isDarkState } from '../../../recoil/recoilStates';
 
 export interface Props {
+  width: string;
+  height: string;
   src: string;
 }
 
 const Img = styled.img<Props>`
-  width: 100%;
-  height: 100%;
-  object-fit: 'contain';
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
 `;
 
-export const Image = (props: Props) => <Img src={props.src} />;
+export const Image = (props: Props) => {
+  const isDark = useRecoilValue(isDarkState);
+  return (
+    <Img
+      width={props.width}
+      height={props.height}
+      src={isDark ? props.src + '.png' : props.src + '-white.png'}
+    />
+  );
+};

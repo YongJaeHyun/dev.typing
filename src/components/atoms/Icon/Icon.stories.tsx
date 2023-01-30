@@ -5,6 +5,8 @@ export default {
   title: 'Atoms/Icon',
   component: Icon,
   argTypes: {
+    width: { control: 'text', defaultValue: '25px' },
+    height: { control: 'text', defaultValue: '25px' },
     color: { control: { type: 'color', presetColors: ['#f5f6fa', '#000'] } },
     name: {
       control: 'select',
