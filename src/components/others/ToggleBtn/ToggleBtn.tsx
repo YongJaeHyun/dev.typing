@@ -4,20 +4,20 @@ import { isDarkState } from '../../../recoil/recoilStates';
 import { Icon } from '../../atoms/icon/Icon';
 
 const InnerCircle = styled.div<{ isDark: boolean }>`
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
   background-color: ${(props) => props.theme.textColor.themeDefault};
   transform: translate(-50%, -50%);
-  left: ${(props) => (props.isDark ? '59px' : '18px')};
+  left: ${(props) => (props.isDark ? '52px' : '15px')};
   position: absolute;
   transition: all 0.4s ease-in-out;
 `;
 
 const OuterCircle = styled.button<{ isDark: boolean }>`
   display: inline-block;
-  width: 80px;
-  height: 35px;
+  width: 70px;
+  height: 30px;
   border: 2px solid ${(props) => props.theme.textColor.themeDefault};
   border-radius: 20px;
   background-color: ${(props) => props.theme.bgColor.themeDefault};
@@ -49,7 +49,12 @@ const ToggleBtn = () => {
   const toggleTheme = () => setIsDark((prev) => !prev);
   return (
     <OuterCircle isDark={isDark} onClick={toggleTheme}>
-      <Icon isDark={isDark} name={isDark ? 'dark_mode' : 'light_mode'} />
+      <Icon
+        width="25px"
+        height="25px"
+        isToggleBtn={true}
+        name={isDark ? 'dark_mode' : 'light_mode'}
+      />
       <InnerCircle isDark={isDark} />
     </OuterCircle>
   );

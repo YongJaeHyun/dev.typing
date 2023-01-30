@@ -6,7 +6,7 @@ const Div = styled.div``;
 export const Logo = () => {
   return (
     <Div>
-      <Text fontSize={24} fontWeight="BOLD" value="dev.typing" />
+      <Text fontSize="24px" fontWeight="BOLD" value="dev.typing" />
     </Div>
   );
 };
