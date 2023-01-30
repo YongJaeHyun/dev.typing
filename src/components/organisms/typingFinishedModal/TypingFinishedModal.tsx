@@ -16,7 +16,7 @@ const TextBox = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 75%;
+  width: 70%;
   height: 100%;
 `;
 
@@ -25,7 +25,7 @@ const HeaderBox = styled.div`
   align-items: center;
   justify-content: center;
   width: 70%;
-  height: 30%;
+  height: 25%;
   border-bottom: 2px solid ${(props) => props.theme.textColor.gray};
 `;
 
@@ -44,7 +44,21 @@ const FooterBox = styled.div`
   justify-content: center;
 `;
 
-const Ul = styled.ul``;
+const Ul = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+`;
+const Li = styled.li`
+  height: 15px;
+  line-height: 15px;
+  :before {
+    content: '·';
+    font-size: 50px;
+    vertical-align: bottom;
+    color: ${(props) => props.theme.accentColor.themeDefault};
+  }
+`;
 
 export const TypingFinishedModal = (props: Props) => {
   // 현재 카테고리 학습률
@@ -68,25 +82,26 @@ export const TypingFinishedModal = (props: Props) => {
     <ModalContainer>
       <TextBox>
         <HeaderBox>
-          <Text value={'학습 완료!'} fontWeight="BOLD" fontSize={22} />
+          <Text value={'학습 완료!'} fontWeight="BOLD" fontSize="22px" />
         </HeaderBox>
         <BodyBox>
           <Ul>
             {mainTexts.map((text, index) => (
-              <Text
-                as="li"
-                key={index}
-                value={text}
-                fontSize={14}
-                fontWeight="BOLD"
-              />
+              <Li>
+                <Text
+                  key={index}
+                  value={text}
+                  fontSize="14px"
+                  fontWeight="BOLD"
+                />
+              </Li>
             ))}
           </Ul>
         </BodyBox>
       </TextBox>
       <FooterBox>
         <Text
-          fontSize={10}
+          fontSize="10px"
           value={
             '계속 진행하시려면 엔터키나 ESC, 다시 학습하시려면 "R"키를 누르세요'
           }

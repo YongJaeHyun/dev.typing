@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { WINDOW_WIDTH } from '../../../utils';
 
 export interface Props {
-  width: number;
+  widthPercent: number;
 }
 
 const Div = styled.div`
@@ -17,7 +17,7 @@ const OuterSpan = styled.span`
 `;
 
 const InnerSpan = styled.span<Props>`
-  width: ${(props) => props.width / 3}%;
+  width: ${(props) => props.widthPercent / 3}%;
   height: 100%;
   background-color: #44bd32;
   transition: all 0.25s ease-in-out;
@@ -29,7 +29,7 @@ export const ProgressBar = (props: Props) => {
   return (
     <Div>
       <OuterSpan>
-        <InnerSpan width={props.width}></InnerSpan>
+        <InnerSpan widthPercent={props.widthPercent}></InnerSpan>
       </OuterSpan>
     </Div>
   );

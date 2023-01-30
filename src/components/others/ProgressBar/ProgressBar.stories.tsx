@@ -5,7 +5,13 @@ export default {
   title: 'Others/ProgressBar',
   component: ProgressBar,
   argTypes: {
-    width: { control: 'range', defaultValue: 0, min: 0, max: 100, step: 1 },
+    widthPercent: {
+      control: 'range',
+      defaultValue: 0,
+      min: 0,
+      max: 100,
+      step: 1,
+    },
   },
 } as Meta;
 
