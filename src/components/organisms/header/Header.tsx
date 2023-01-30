@@ -4,10 +4,8 @@ import { Button } from '../../molecules/button/Button';
 import { Logo } from '../../molecules/logo/Logo';
 import ToggleBtn from '../../others/ToggleBtn/ToggleBtn';
 import { Icon } from '../../atoms/icon/Icon';
-import { useRecoilValue } from 'recoil';
-import { isDarkState } from '../../../recoil/recoilStates';
 
-const Container = styled.header<{ isDark: boolean }>`
+const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,9 +32,8 @@ const RightHeader = styled.div`
 `;
 
 export const Header = () => {
-  const isDark = useRecoilValue(isDarkState);
   return (
-    <Container isDark={isDark}>
+    <Container>
       <LeftHeader>
         <Button borderRadius="50%">
           <Icon width="25px" height="25px" name="menu" size={30} />
@@ -52,11 +49,7 @@ export const Header = () => {
           <Image
             width="25px"
             height="25px"
-            src={
-              isDark
-                ? `${process.env.PUBLIC_URL}/assets/img/github-mark-white.png`
-                : `${process.env.PUBLIC_URL}/assets/img/github-mark.png`
-            }
+            src={`${process.env.PUBLIC_URL}/assets/img/github-mark`}
           />
         </Button>
       </RightHeader>
