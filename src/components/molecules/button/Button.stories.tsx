@@ -15,6 +15,24 @@ export default {
       control: 'select',
       options: [20, 24, 40, 48],
     },
+    width: {
+      control: 'range',
+      min: 1,
+      max: 100,
+      step: 1,
+      defaultValue: 25,
+    },
+    height: {
+      control: 'range',
+      min: 1,
+      max: 100,
+      step: 1,
+      defaultValue: 25,
+    },
+    src: {
+      control: 'text',
+      defaultValue: './assets/img/github-mark',
+    },
   },
 } as Meta;
 
@@ -23,12 +41,12 @@ const Template: Story<Props> = (args) => (
   <Button {...args} onClick={testFunc} />
 );
 
-export const ImageBtn = Template.bind({});
-ImageBtn.args = {
-  children: <Icon name="menu" />,
-};
-
 export const IconBtn = Template.bind({});
 IconBtn.args = {
-  children: <Image src="./assets/img/github-mark.png" />,
+  children: <Icon width="25px" height="25px" name="menu" />,
+};
+
+export const ImageBtn = Template.bind({});
+ImageBtn.args = {
+  children: <Image width="25px" height="25px" src="./assets/img/github-mark" />,
 };
